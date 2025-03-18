@@ -15,15 +15,18 @@ app.use('/user',userRoutes);
 app.use('/user',blogPost)
 
 app.get("/", async (req, res) => {
-    const os = require('os');
-    const networkInterfaces = os.networkInterfaces();
-    const ip = Object.values(networkInterfaces)
-      .flat()
-      .find((iface) => iface.family === 'IPv4' && !iface.internal)?.address || '192.168.x.x';
+//     const os = require('os');
+//     const networkInterfaces = os.networkInterfaces();
+//     const ip = Object.values(networkInterfaces)
+//       .flat()
+//       .find((iface) => iface.family === 'IPv4' && !iface.internal)?.address || '192.168.x.x';
 
-    res.send(`Server running at http://${ip}:${PORT}`);
+//     res.send(`Server running at http://${ip}:${PORT}`);
+// });
+  res.send("Backend is running on Vercel!");
 });
 
+module.exports = app;
   
 
 // app.listen(PORT,()=>{
