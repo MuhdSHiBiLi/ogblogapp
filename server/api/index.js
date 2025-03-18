@@ -6,7 +6,8 @@ const cors= require('cors');
 const userRoutes = require('./Routes/userRoutes');
 const blogPost = require('./Routes/blogpostRoutes');
 
-const PORT = process.env.PORT || 3010;
+// const PORT = process.env.PORT || 3010;
+const PORT = 3010;
 const app = express();
 app.use(morgan('dev'));
 app.use(cors());
