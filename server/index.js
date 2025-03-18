@@ -29,14 +29,14 @@ app.get("/", async (req, res) => {
 // app.listen(PORT,()=>{
 //     console.log(`Port is running on http://localhost:${PORT}`);
 // });
-app.listen(PORT, '0.0.0.0', () => {
-    const os = require('os');
-    const networkInterfaces = os.networkInterfaces();
-    const ip = Object.values(networkInterfaces)
-      .flat()
-      .find((iface) => iface.family === 'IPv4' && !iface.internal)?.address || '192.168.x.x';
+// app.listen(PORT, '0.0.0.0', () => {
+//     const os = require('os');
+//     const networkInterfaces = os.networkInterfaces();
+//     const ip = Object.values(networkInterfaces)
+//       .flat()
+//       .find((iface) => iface.family === 'IPv4' && !iface.internal)?.address || '192.168.x.x';
   
-    console.log(`Server running on:  
-    - Local: http://localhost:${PORT}  
-    - Network: http://${ip}:${PORT}`);
-  });
+//     console.log(`Server running on:  
+//     - Local: http://localhost:${PORT}  
+//     - Network: http://${ip}:${PORT}`);
+//   });
